@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract Child{
+    string public school = "school";
+}
+
+contract parent{
+    Child public vont;
+    function deploy() public {
+        vont = new Child();
+    }
+    function chsngeContract() public view returns(string memory){
+return vont.school();
+    }
+}
